@@ -1,0 +1,113 @@
+:root {
+    --gradient: linear-gradient(
+      45deg,
+      #845ec2,
+      #d65db1,
+      #ff6f91,
+      #ff9671,
+      #ffc75f,
+      #f9f871
+    );
+  }
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+
+}
+body {
+    background-color: transparent;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-family: sans-serif;
+
+}
+.container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 30%;
+    
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border: solid 2px black;
+    border-radius: 12px;
+    padding: 20px 5px;
+    margin: 20px 0;
+    position: relative;
+}
+.ask {
+    display: flex;
+    justify-content: space-around;
+
+}
+.ask h3 {
+    font-size: 20px;
+}
+.btn {
+    cursor: pointer;
+    padding:  0 4px;
+    font-size: 20px;
+    background-color: transparent;
+}
+.demo {
+    font-size: 16px;
+    font-weight: 600;
+    display: none;
+}
+.showe {
+    display: block;
+}
+
+.demo::before {
+    content: '\f075';
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    top: 32px;
+    left: 20px;
+    z-index: 0;
+    font-size: 70px;
+    color: transparent;
+    background-image: var(--gradient);
+	background-clip: text;
+	background-size: 400%;
+	background-position: left;
+    opacity: 0.3;
+
+}
+.demo::after {
+    content: '\f075';
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    top: 0;
+    left: 0;
+    z-index: 0;
+    rotate: 270deg ;
+    font-size: 70px;
+    color: transparent;
+    background-image: var(--gradient);
+	background-clip: text;
+	background-size: 400%;
+	background-position: center;
+    opacity: 0.3;
+    
+}
+
+
+@keyframes bg-gradient {
+	0%{
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
